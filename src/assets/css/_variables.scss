@@ -1,0 +1,61 @@
+//定义内容宽度
+$width-b:1140px;
+//定义颜色
+$colors:(
+  "movies_header_bg":#e0acd5,
+  "black":#111,
+  "movies_header_color":#f7f7f7,
+  "primary":#37a,
+  'primary-1':#e356c6,
+  'blue':#f0f3f5,
+  "grade":#e09015,
+  "purple":#666699
+);
+//定义字体大小
+$font-base-size:1rem;
+$font-sizes:(
+  'xxs':0.846,//11px
+  'xs': 0.923, //12px
+  'normal':1, //13px
+  's':1.077, //14px
+  'm':1.231  //16px
+);
+//定义边距
+$spacing-base-size:1rem;
+$spacing-sizes:(
+  0:0,
+  1:0.25,
+  2:0.5,
+  3:0.75,
+  4:1,
+  5:1.25,
+  6:2,
+  7:2.5
+);
+//定义边距类型
+$spacing-types:(
+  m:margin,
+  p:padding
+);
+//定义边距方向
+$spacing-direction:(
+  t:top,
+  l:left,
+  r:right,
+  b:bottom
+);
+//justify-content决定了flex items在main axis上的对齐方式
+$flex-jc:(
+  start:flex-start,
+  end:flex-end,
+  center:center,
+  between:space-between,
+  around:space-around
+);
+//align-items（决定了flex items在cross axis上的对齐方式）
+$flex-ai:(
+  start:flex-start,
+  end:flex-end,
+  center:center,
+  stretch:stretch
+);

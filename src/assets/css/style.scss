@@ -1,0 +1,55 @@
+@import "_variables";
+//定义flex布局
+.display-flex{
+  display: flex;
+};
+//定义是否换行
+.flex-wrap{
+  flex-wrap: wrap;
+};
+//循环flex布局
+@each $jcKey,$jc in $flex-jc{
+  .jc-#{$jcKey}{
+    justify-content: $jc;
+  }
+};
+@each $aiKey,$ai in $flex-ai{
+  .ai-#{$aiKey}{
+    align-items: $ai;
+  }
+};
+//循环颜色
+@each $colorKey,$color in $colors{
+  .bg-#{$colorKey}{
+    background-color: $color;
+  }
+  .font-#{$colorKey}{
+    color: $color;
+  }
+}
+
+//循环字体
+@each $sizeKey,$size in $font-sizes{
+  .font-#{$sizeKey}{
+    font-size: $size * $font-base-size;
+  }
+}
+//循环边距
+//margin-t:2px
+@each $typeKey,$type in $spacing-types{
+  @each $directionKey,$direction in $spacing-direction{
+    @each $sizeKey,$size in $spacing-sizes{
+      .#{$typeKey}#{$directionKey}-#{$sizeKey}{
+        #{$type}-#{$direction}: $spacing-base-size * $size
+      }
+    }
+  }
+}
+//m-2
+@each $typeKey,$type in $spacing-types{
+  @each $sizeKey,$size in $spacing-sizes{
+    .#{$typeKey}-#{$sizeKey}{
+      #{$type}: $size * $spacing-base-size
+    }
+  }
+}
