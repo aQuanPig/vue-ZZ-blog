@@ -16,7 +16,7 @@
       <i class="iconfont icon-github-back"></i>
       <span>GitHub</span>
     </div>
-    <div class="item">
+    <div class="item" @click="$router.push('/login')">
       <i class="iconfont icon-dengluzhuce"></i>
       <span>登录/注册</span>
     </div>

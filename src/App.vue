@@ -1,6 +1,6 @@
 <template>
   <div id="app" :style="contentStyleObj">
-    <nav-bar/>
+    <nav-bar v-if="$route.meta.keepAlive"/>
     <router-view/>
   </div>
 </template>
@@ -23,10 +23,9 @@
 <style lang="scss">
   @import "assets/css/base.css";
   @import "assets/css/style";
-  html,body {
+  html,body,{
     height: 100%;
-  }
-  #app {
-    background:url('./assets/img/watercolor.png');
+    width: 100%;
+    background:url('./assets/img/so-white.png');
   }
 </style>

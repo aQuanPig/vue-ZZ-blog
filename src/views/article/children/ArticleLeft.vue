@@ -1,57 +1,58 @@
 <template>
-  <div class="article-left">
-    <div><p class="article-header pl-5">文章列表</p></div>
-    <article-left-item :model="item" v-for="item in model" :key="item._id"/>
-    <Page :total="total" show-total :page-size="5" class-name="page"/>
+  <div class="article-right">
+   <article-left-top :model="adminUser"/>
+    <article-left-center class="mt-3" :categories="categories"/>
+    <article-left-bottom class="mt-3" :articles="new_categories"/>
   </div>
 </template>
 
 <script>
-  import ArticleLeftItem from "./ArticleLeftItem";
-  import {getArticles} from "../../../network/articles";
+  import {getAdminUserData} from 'network/user'
+  import {getCategoriesData} from 'network/categories'
+  import {getNewArticles} from 'network/articles'
+  import ArticleLeftTop from "./ArticleLeftTop";
+  import ArticleLeftCenter from "./ArticleLeftCenter";
+  import ArticleLeftBottom from "./ArticleLeftBottom";
   export default {
-    name: "ArticleLeft",
+    name: "ArticleRight",
     components:{
-      ArticleLeftItem
+      ArticleLeftTop,
+      ArticleLeftCenter,
+      ArticleLeftBottom
     },
     data(){
       return {
-        model:[],
-        total:0
+        adminUser:{},
+        categories:[],
+        new_categories:[]
       }
     },
     methods:{
-      getArticlesData(){
-        getArticles(1,5).then(res=>{
-          const {model,total} = res.data
-          this.model = model
-          this.total = total
-        })
+      async getAdminUserData(){
+        const res = await getAdminUserData()
+        this.adminUser = res.data
+      },
+      async getCategoriesData(){
+        const res = await getCategoriesData()
+        this.categories = res.data
+      },
+      async getNewArticlesData(){
+        const res = await getNewArticles()
+        this.new_categories = res.data
       }
     },
     created() {
-      this.getArticlesData()
+      this.getAdminUserData()
+      this.getCategoriesData()
+      this.getNewArticlesData()
     }
   }
 </script>
 
 <style lang="scss" scoped>
-   .article-left{
-     position: relative;
-     width: 70%;
-     height: 100%;
-     margin-right: 20px;
-     border-radius: 10px;
-     border: 1px solid #80869529;
-     background-color: #fff;
-     .article-header{
-       color: #515a6e;
-       font-size: 20px;
-       border-bottom: 2px solid pink;
-     }
-     .page{
-       position: relative;
-       left: 60%;
-     }
-   }
+  .article-right{
+    width: 26%;
+    height: 100vh;
+    background-color: #fff;
+  }
 </style>

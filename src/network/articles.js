@@ -5,3 +5,13 @@ export function getArticles(page,size) {
     params: { page, size }
   })
 }
+export function getNewArticles() {
+  return request({
+    url:'/new_articles'
+  })
+}
+export function getArticlesDetail(id) {
+  return request({
+    url:`/articles/${id}`
+  })
+}

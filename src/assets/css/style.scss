@@ -7,6 +7,9 @@
 .flex-wrap{
   flex-wrap: wrap;
 };
+.flex{
+  flex: 1;
+}
 //循环flex布局
 @each $jcKey,$jc in $flex-jc{
   .jc-#{$jcKey}{
@@ -52,4 +55,19 @@
       #{$type}: $size * $spacing-base-size
     }
   }
+}
+.font-weight {
+  font-weight: 600;
+}
+.body{
+  width: 1024px;
+  height: 100%;
+  margin:30px auto;
+}
+.icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
 }
