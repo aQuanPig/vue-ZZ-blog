@@ -1,6 +1,6 @@
 <template>
   <div id="app" :style="contentStyleObj">
-    <nav-bar v-if="$route.meta.keepAlive"/>
+    <nav-bar v-if="!$route.meta.keepAlive"/>
     <router-view/>
   </div>
 </template>

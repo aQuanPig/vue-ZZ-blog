@@ -1,7 +1,10 @@
 <template>
   <div class="mt-3 comment">
-    <Input v-model="content" class="p-6" type="textarea" :autosize="{minRows: 4,maxRows: 5}" placeholder="在这里发表你对此文的观点" />
-    <Button :disabled="textLength" type="success"  class="commit">
+    <div class="p-5 display-flex ai-center">
+      <img :src="getAvatar" class="avatar mr-2" v-if="$store.state.isLogin">
+      <Input class="inputArea" show-word-limit :maxlength="1000" v-model="content" type="textarea" :autosize="{minRows: 4,maxRows: 5}" placeholder="在这里发表你对此文的观点" />
+    </div>
+    <Button :disabled="textLength" type="info"  class="commit">
       <span class="iconfont icon-fabu pr-1"></span>发表评论
     </Button>
 <!--    <button type="submit" :disabled="textLength" class="commit iconfont icon-fabu">发表评论</button>-->
@@ -13,12 +16,16 @@
     name: "Comment",
     data(){
       return {
-        content:''
+        content:'',
       }
     },
     computed:{
       textLength(){
         return this.content.length ? false : true
+      },
+      getAvatar(){
+        const avatar = this.$store.state.currentUser.avatar
+        return avatar
       }
     }
   }
@@ -28,7 +35,16 @@
  .comment {
    position: relative;
    height: 200px;
-   background-color:rgba(216, 213, 213, 0.3);
+   background-color:#508c7bba;
+   .avatar{
+     width: 50px;
+     height: 50px;
+     border-radius: 50%;
+   }
+   .inputArea{
+     position: relative;
+     top: 16px;
+   }
    .commit{
      position: absolute;
      right: 32px;

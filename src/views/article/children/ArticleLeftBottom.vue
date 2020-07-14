@@ -42,7 +42,7 @@
    .content{
      padding: 5px 5px;
      .title{
-       width: 65%;
+       width: 63%;
        overflow: hidden;
        text-overflow: ellipsis;
        white-space:nowrap;

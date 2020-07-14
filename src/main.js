@@ -13,6 +13,7 @@ Vue.filter('formatDate',formatDate)
 Vue.prototype.$bus = new Vue()
 import './utils/directive'
 Vue.use(ViewUI);
+Vue.$Message
 Vue.config.productionTip = false
 
 new Vue({

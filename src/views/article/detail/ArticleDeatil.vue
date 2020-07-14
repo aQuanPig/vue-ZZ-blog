@@ -31,7 +31,6 @@
     },
     mounted() {
       getArticlesDetail(this.id).then(res=>{
-        console.log(res)
          this.model = res.data
       })
     },
@@ -40,15 +39,15 @@
 
 <style lang="scss" scoped>
  .detail{
+   position: relative;
    padding-bottom: 5px;
-
    .detail-body{
      overflow: hidden;
    }
    .bg-gif{
      position: absolute;
-     top: 40%;
-     left: 10%;
+     top: 140px;
+     left: -35px;
      width: 160px;
    }
  }

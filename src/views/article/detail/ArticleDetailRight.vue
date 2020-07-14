@@ -3,6 +3,7 @@
 </template>
 
 <script>
+  import {GET_ELEMENTTOP} from 'store/mutation-types'
   export default {
     name: "ArticleDetailRight",
     props:{
@@ -20,8 +21,7 @@
       for(let i of h3){
         this.topListAndText.push({text:i.innerText,top:i.offsetTop})
       }
-      this.$store.commit('getElementTop',this.topListAndText)
-      console.log(this.topListAndText)
+      this.$store.commit(GET_ELEMENTTOP,this.topListAndText)
     }
   }
 </script>
