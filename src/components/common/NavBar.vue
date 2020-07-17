@@ -1,14 +1,10 @@
 <template>
   <div class="display-flex nav-bar bg-movies_header_bg font-movies_header_color jc-end pr-6">
-    <div class="item">
+    <div class="item" @click="$router.push('/')">
       <i class="iconfont icon-index-copy"></i>
       <span>首页</span>
     </div>
-    <div class="item">
-      <i class="iconfont icon-wenzhangliebiao"></i>
-      <span>文章详情</span>
-    </div>
-    <div class="item">
+    <div class="item" @click="$router.push('/messageboard')">
       <i class="iconfont icon-liuyanban1"></i>
       <span>留言板</span>
     </div>

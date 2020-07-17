@@ -6,8 +6,16 @@
         <p class="article-header pl-1">文章列表</p>
       </div>
     </div>
-    <article-right-item :model="item" v-for="item in model" :key="item._id"/>
-    <Page :total="total" :page-size="5" class-name="page" @on-change="pageChange"/>
+    <div v-show="isShowAllArticles">
+      <article-right-item :model="item" v-for="item in model" :key="item._id"/>
+    </div>
+    <div v-show="isCategoryArticles">
+      <article-right-item :model="item" v-for="item in model" :key="item._id"/>
+    </div>
+    <div v-show="isKeywordArticles">
+      <article-right-item :model="item" v-for="item in model" :key="item._id"/>
+    </div>
+    <Page v-show="!isKeywordArticles" :total="total" :page-size="5" class-name="page" @on-change="pageChange"/>
   </div>
 </template>
 
@@ -24,7 +32,10 @@
         model:[],
         total:0,
         currentPage:1,
-        pageSize:5
+        pageSize:5,
+        isShowAllArticles:true,
+        isKeywordArticles:false,
+        isCategoryArticles:false
       }
     },
     methods:{
@@ -33,14 +44,25 @@
           const {model,total} = res.data
           this.model = model
           this.total = total
-          this.$bus.$emit('totalNumber',this.total)
         })
       },
       pageChange(page){
         this.currentPage = page
         this.getArticlesData(this.currentPage)
-
       }
+    },
+    mounted() {
+      this.$bus.$on('getCategoryArticles',data=>{
+        this.isCategoryArticles = true
+        this.isShowAllArticles = false
+        this.model = data.articles
+        this.total = data.total
+      })
+      this.$bus.$on('getKeyWordArticles',data=>{
+        this.isShowAllArticles = false
+        this.isKeywordArticles = true
+        this.model = data
+      })
     },
     created() {
       this.getArticlesData(this.currentPage,this.pageSize)

@@ -9,7 +9,7 @@
     </div>
     <img src="~assets/img/timg.gif" alt="" class="bg-gif">
     <!--评论内容-->
-    <comment/>
+    <comment :article-id="model._id" @commentSuccess="commentSuccess"/>
   </div>
 </template>
 
@@ -25,14 +25,22 @@
     components:{ArticleDetailLeft,ArticleDetailRight,ArticleTitle,Comment},
     data(){
       return {
-        model:{},
-
+        model: {},
       }
     },
-    mounted() {
-      getArticlesDetail(this.id).then(res=>{
-         this.model = res.data
-      })
+    methods:{
+      getArticlesDetailData(){
+        getArticlesDetail(this.id).then(res=>{
+          this.model = res.data
+          this.$bus.$emit('articleInfo',this.model.comments)
+        })
+      },
+      commentSuccess(){
+        this.getArticlesDetailData()
+      }
+    },
+    created() {
+      this.getArticlesDetailData()
     },
   }
 </script>

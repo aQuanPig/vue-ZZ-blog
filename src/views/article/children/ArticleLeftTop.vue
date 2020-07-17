@@ -12,13 +12,15 @@
      </div>
    </div>
     <div class="display-flex mt-4 another">
-      <div class="anotherInfo" style="border: none">文章{{total}}</div>
-      <div class="anotherInfo">留言{{message}}</div>
+      <div class="anotherInfo" style="border: none">文章 {{total}}</div>
+      <div class="anotherInfo">留言 {{message}}</div>
     </div>
   </div>
 </template>
 
 <script>
+  import {getMessageLength} from 'network/comment'
+  import {getArticlesLength} from 'network/articles'
   export default {
     name: "ArticleLeftTop",
     props:{
@@ -36,9 +38,8 @@
       }
     },
     mounted() {
-      this.$bus.$on('totalNumber',total=>{
-        this.total = total
-      })
+      getMessageLength().then(res => this.total = res.data)
+      getArticlesLength().then(res => this.message = res.data)
     }
   }
 </script>

@@ -6,7 +6,7 @@ export function request(config) {
   })
 
   instance.interceptors.request.use(config=>{
-    // console.dir(config)
+    console.dir(config)
     return config
   },err=>{
     console.log(err)
