@@ -61,6 +61,11 @@
 <style lang="scss" scoped>
   .nav-bar{
     padding-right: 16rem;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 9;
   }
  .item{
    margin: 0 15px;

@@ -12,8 +12,8 @@
      </div>
    </div>
     <div class="display-flex mt-4 another">
-      <div class="anotherInfo" style="border: none">文章 {{total}}</div>
-      <div class="anotherInfo">留言 {{message}}</div>
+      <div class="anotherInfo" style="border: none">文章 {{message}}</div>
+      <div class="anotherInfo">留言 {{total}}</div>
     </div>
   </div>
 </template>

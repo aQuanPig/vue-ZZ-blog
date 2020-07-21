@@ -9,7 +9,9 @@ const state = {
   //判断登录状态
   isLogin:false,
   //获取用户信息
-  currentUser:null
+  currentUser:null,
+  // 点赞状态
+
 }
 export default new Vuex.Store({
   state,

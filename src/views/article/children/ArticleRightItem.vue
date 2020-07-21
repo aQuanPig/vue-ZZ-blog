@@ -10,6 +10,10 @@
         <img :src="model.authorinfo.avatar" alt="" style="width: 30px;height: 30px;border-radius: 50%">
         <p class="font-primary-1 pl-2 pr-4" style="font-weight: 600;">{{model.authorinfo.nickname}}</p>
         <p>{{model.date | formatDate}}</p>
+        <div class="display-flex mt-2 ml-2 another">
+          <p class="iconfont icon-dianzan another-item">{{model.praise.length}}</p>
+          <p class="iconfont icon-huifu pl-3 another-item">{{  model.comments.length}}</p>
+        </div>
       </div>
       <div class="mt-3">
         <Tag :color="index % 2 ===0 ?'magenta':'purple'" v-for="(item1,index) in model.categories" :key="item1._id"> {{ item1.name }}</Tag>
@@ -60,6 +64,14 @@
       }
       .item-detail {
         width: 100%;
+      }
+      .another{
+        position: relative;
+        bottom: 5px;
+        .another-item{
+          font-size: 12px;
+          color: #51a751;
+        }
       }
     }
   }

@@ -32,5 +32,7 @@
 </script>
 
 <style lang="scss" scoped>
-
+  .body{
+    margin-top: 70px;
+  }
 </style>

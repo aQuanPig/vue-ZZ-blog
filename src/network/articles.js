@@ -37,3 +37,11 @@ export function getKeySearch(text) {
     url:`/articles/keyword/${text}`
   })
 }
+//点赞
+export function postPraise(articleId,userId,type) {
+  return request({
+    url:'/praise',
+    data:{articleId,userId,type},
+    method:'post'
+  })
+}

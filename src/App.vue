@@ -32,6 +32,7 @@
     height: 100%;
     width: 100%;
     background:url('./assets/img/so-white.png');
+    overflow-x:hidden;
   }
   /*进入过渡的开始状态，元素被插入时生效，只应用一帧后立即删除(运动初始状态)*/
   /*进入过渡的结束状态，元素被删除时生效，只应用一帧后立即删除(运动初始状态)*/
