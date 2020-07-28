@@ -73,7 +73,7 @@
 <style lang="scss" scoped>
   .board{
     width: 1024px;
-    margin: 0 auto;
+    margin: 70px auto 0;
   }
   .alert{
     margin-left: 20px;

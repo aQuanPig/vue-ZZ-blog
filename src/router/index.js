@@ -3,13 +3,13 @@ import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 const Article = ()=>import("views/article/Article")
 const ArticleDeatil = ()=>import("../views/article/detail/ArticleDeatil")
-const Login = ()=> import('components/common/Login')
-const Register = ()=> import('components/common/Register')
+const MainLogin = () => import("../components/common/MainLogin")
+const Register =()=>import("../components/common/register/Register");
 const MessageBoard = ()=>import("../views/messageBoard/MessageBoard")
 
   const routes = [
     {path:'/',redirect:'/articles'},
-    {path:'/login',component:Login,meta:{keepAlive:true}},
+    {path:'/login',component:MainLogin,meta:{keepAlive:true}},
     {path:'/register',component:Register,meta:{keepAlive:true}},
     {path:'/articles',component:Article},
     {path:'/articles/:id',component:ArticleDeatil,props:true},

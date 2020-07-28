@@ -1,4 +1,4 @@
-import {GET_ELEMENTTOP,GET_USERINFO} from './mutation-types'
+import {GET_ELEMENTTOP,GET_USERINFO,SHOW_LOADING,HIDDEN_LOADING, SHOW_LOGIN, SHOW_REGISTER} from './mutation-types'
 export default {
   [GET_ELEMENTTOP](state,payload){
     state.elTopAndText = payload
@@ -15,5 +15,17 @@ export default {
       state.currentUser = {}
       state.isLogin = false
     }
+  },
+  [SHOW_LOADING](state){
+    state.isLoading = true
+  },
+  [HIDDEN_LOADING](state){
+    state.isLoading = false
+  },
+  [SHOW_LOGIN](state){
+    state.isShow = true
+  },
+  [SHOW_REGISTER](state){
+    state.isShow = false
   }
 }

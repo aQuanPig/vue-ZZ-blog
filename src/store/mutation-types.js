@@ -1,2 +1,6 @@
-export const GET_ELEMENTTOP = 'getElementTop'
-export const GET_USERINFO = 'getUserInfo'
+export const GET_ELEMENTTOP = 'GET_ELEMENTTOP'
+export const GET_USERINFO = 'GET_USERINFO'
+export const SHOW_LOADING = 'SHOW_LOADING'
+export const HIDDEN_LOADING = 'HIDDEN_LOADING'
+export const SHOW_LOGIN = 'SHOW_LOGIN'
+export const SHOW_REGISTER = 'SHOW_REGISTER'

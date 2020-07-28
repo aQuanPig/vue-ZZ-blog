@@ -10,8 +10,9 @@ const state = {
   isLogin:false,
   //获取用户信息
   currentUser:null,
-  // 点赞状态
-
+  isLoading:false,
+  // 登录注册界面显示与隐藏
+  isShow:true
 }
 export default new Vuex.Store({
   state,

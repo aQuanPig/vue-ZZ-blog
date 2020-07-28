@@ -61,7 +61,7 @@
 <style lang="scss" scoped>
   .nav-bar{
     padding-right: 16rem;
-    position: fixed;
+    position: sticky;
     top: 0;
     right: 0;
     left: 0;

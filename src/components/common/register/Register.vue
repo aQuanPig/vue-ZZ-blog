@@ -45,7 +45,8 @@
 </template>
 
 <script>
-  import {postUserData} from 'network/user'
+  import { postUserData } from 'network/user'
+  import { SHOW_LOGIN } from 'store/mutation-types'
   export default {
     name: "Register",
     data(){
@@ -81,15 +82,14 @@
         this.model.avatar = response.url
       },
       changeClick(){
-        this.$router.push('/login')
-
+        this.$store.commit(SHOW_LOGIN)
       }
     }
   }
 </script>
 
 <style lang="scss" scoped>
-  @import "../../assets/css/login";
+  @import "../../../assets/css/login";
   .file-item{
     position: relative;
     left: -38px;

@@ -1,5 +1,5 @@
 <template>
-  <div class="mt-3">
+  <div class="mt-3" ref="comment">
     <div class="comment">
       <div class="p-5 display-flex ai-center">
       <img :src="getAvatar" class="avatar mr-2" v-if="$store.state.isLogin">

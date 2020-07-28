@@ -26,8 +26,9 @@
 </template>
 
 <script>
-  import {GET_USERINFO} from 'store/mutation-types'
+  import {GET_USERINFO, SHOW_REGISTER} from 'store/mutation-types'
   import {validateUser} from 'network/user'
+
   export default {
     name: "Login",
     data(){
@@ -59,14 +60,14 @@
         this.$router.push('/articles')
       },
       changeClick(){
-        this.$router.push('/register')
+        this.$store.commit(SHOW_REGISTER)
       }
     }
   }
 </script>
 
 <style lang="scss" scoped>
-  @import "../../assets/css/login";
+  @import "../../../assets/css/login";
   .panel-left-none{
     margin-top: 60px;
   }
