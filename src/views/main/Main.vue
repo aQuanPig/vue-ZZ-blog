@@ -118,5 +118,8 @@ export default {
       padding-top: 5px;
     }
   }
+  .total {
+    margin-bottom: 40px;
+  }
 
 </style>
