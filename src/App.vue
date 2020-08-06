@@ -14,10 +14,18 @@
   import NavBar from "components/common/NavBar";
   export default {
     name: "App",
+    data(){
+      return{
+
+      }
+    },
     components:{
       NavBar,
       Loading,
       BackGround,
+    },
+    mounted() {
+
     }
   }
 </script>

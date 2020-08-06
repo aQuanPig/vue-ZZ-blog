@@ -6,18 +6,14 @@
         <span>首页</span>
       </div>
       <div class="item" @click="$router.push('/tag')">
-        <i class="iconfont icon-liuyan"></i>
-        <span>标签</span>
-      </div>
-      <div class="item" @click="$router.push('/messageboard')">
-        <i class="iconfont icon-liuyan"></i>
+        <i class="iconfont icon-fenlei-copy"></i>
         <span>分类</span>
       </div>
       <div class="item" @click="$router.push('/messageboard')">
         <i class="iconfont icon-liuyan"></i>
         <span>留言板</span>
       </div>
-      <div class="item">
+      <div class="item" @click="routerGit">
         <i class="iconfont icon-github"></i>
         <span>GitHub</span>
       </div>
@@ -74,6 +70,9 @@ export default {
         this.$bus.$emit('getKeyWordArticles', res.data)
         this.search = ''
       })
+    },
+    routerGit() {
+      window.open('https://github.com/aQuanPig')
     },
   },
   computed: {
