@@ -30,7 +30,6 @@ npm run serve
 部分截图：
 
 **首页**：
-
 ![image-20200806213327114](C:\Users\565\AppData\Roaming\Typora\typora-user-images\image-20200806213327114.png)
 
 **文章列表**：
@@ -43,7 +42,7 @@ npm run serve
 
 **登录：**
 
-![image-20200806213459450](C:\Users\565\AppData\Roaming\Typora\typora-user-images\image-20200806213459450.png)
+![image-20200806213459450](https://github.com/aQuanPig/vue-ZZ-blog/blob/master/img/%E7%99%BB%E5%BD%95.png)
 
 **注册：**
 
