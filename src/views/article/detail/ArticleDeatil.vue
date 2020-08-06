@@ -80,6 +80,9 @@
       model(newValue){
         this.showPraise(newValue)
       }
+    },
+    activated() {
+      window.scrollTo(0,0)
     }
   }
 </script>

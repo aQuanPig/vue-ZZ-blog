@@ -1,31 +1,35 @@
 <template>
-  <div id="app">
+  <div id="app" ref="app">
     <nav-bar v-if="!$route.meta.keepAlive"/>
+    <back-ground/>
     <loading v-show="$store.state.isLoading"/>
     <keep-alive>
-      <router-view/>
+     <router-view/>
     </keep-alive>
   </div>
 </template>
 <script>
+  import BackGround from './components/common/BackGround/BackGround'
   import Loading from "./components/common/Loading";
   import NavBar from "components/common/NavBar";
   export default {
     name: "App",
     components:{
       NavBar,
-      Loading
+      Loading,
+      BackGround,
     }
   }
 </script>
 <style lang="scss">
   @import "assets/css/base.css";
   @import "assets/css/style";
-  html,body,{
-    height: 100%;
-    width: 100%;
-    background:url('./assets/img/so-white.png');
-    overflow-x:hidden;
+  @import "assets/css/iconfont/iconfont.css";
+  html,body{
+    height: auto;
+    width: auto;
+    // background:url('./assets/img/so-white.png');
+    // overflow-x:hidden;
   }
   .fade-enter,
   .fade-leave-active {
@@ -35,5 +39,7 @@
   .fade-leave-active {
     transition: opacity 1s;
   }
-
+  #app {
+    position: relative;
+  }
 </style>

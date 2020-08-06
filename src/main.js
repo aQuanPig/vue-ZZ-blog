@@ -4,7 +4,7 @@ import router from './router'
 import store from './store'
 import ViewUI from 'view-design';
 import 'view-design/dist/styles/iview.css';
-import './assets/font_2s6dk5vyl6w/iconfont.css'
+// import './assets/font_2s6dk5vyl6w/iconfont.css'
 import './assets/font_0m30oeoiukb/iconfont.css'
 import './assets/font_0m30oeoiukb/iconfont'
 import {formatDate,formatDateAll} from './filters/filter'
