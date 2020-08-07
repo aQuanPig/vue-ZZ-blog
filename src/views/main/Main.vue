@@ -1,14 +1,16 @@
 <template>
-  <div class="main">
-    <h1 class="hotArticle">文章列表</h1>
-    <div class="tag">
-      <p class="tag-item">希望你永远记得:不要脾气大过于本事</p>
-      <p class="tag-item">同样的,我希望你永远快乐</p>
+  <div class="main-wrap">
+    <div class="main">
+      <h1 class="hotArticle">文章列表</h1>
+      <div class="tag">
+        <p class="tag-item">希望你永远记得:不要脾气大过于本事</p>
+        <p class="tag-item">同样的,我希望你永远快乐</p>
+      </div>
+      <div class="articleShow">
+        <MainItem class="articleItem" v-for="item in model" :key="item._id" :title="item.title" :account="item.account" :image="item.image" :date="item.date" :id="item._id"/>
+      </div>
+      <Page :total="total" class="total" show-total/>
     </div>
-    <div class="articleShow">
-      <MainItem class="articleItem" v-for="item in model" :key="item._id" :title="item.title" :account="item.account" :image="item.image" :date="item.date" :id="item._id"/>
-    </div>
-    <Page :total="total" class="total" show-total/>
 
   </div>
 </template>
@@ -76,9 +78,17 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+  .main-wrap{
+    padding-top: 20px;
+    padding-bottom:10px;
+    background: url("../../assets/img/11.jpg") no-repeat;
+    background-size: cover;
+  }
 .main{
-  margin-top: 80px;
   text-align: center;
+  margin: 0 auto;
+  width: 1300px;
+  background-color: #fff;
 }
 .articleShow {
   position: relative;
@@ -88,7 +98,7 @@ export default {
   padding: 10px;
   .articleItem{
     &:hover{
-      transform: scale(0.9);
+      transform: scale(1.1);
       transition: all 0.4s ;
     }
   }
@@ -99,6 +109,7 @@ export default {
   display:inline-block;
   color: #000000;
   line-height: 1;
+  padding-top: 60px;
   &::after{
     content:"";
     display: inline-block;
@@ -119,7 +130,8 @@ export default {
     }
   }
   .total {
-    margin-bottom: 40px;
+    padding-top: 40px;
+    padding-bottom: 40px;
   }
 
 </style>

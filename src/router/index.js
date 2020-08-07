@@ -2,7 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 // const Article = ()=>import("views/article/Article")
-const ArticleDeatil = ()=>import("../views/article/detail/ArticleDeatil")
+const ArticlesDetail = ()=>import("../views/articleDetail/ArticlesDetail")
 const MainLogin = () => import("../components/common/MainLogin")
 const Register =()=>import("../components/common/register/Register");
 const MessageBoard = ()=>import("../views/messageBoard/MessageBoard")
@@ -14,7 +14,7 @@ const Category = ()=>import( "../views/category/Category");
     {path:'/register',component:Register,meta:{keepAlive:true}},
     // {path:'/main',component:Article},
     {path:"/tag",component:Category},
-    {path:'/articles/:id',component:ArticleDeatil,props:true},
+    {path:'/articles/:id',component:ArticlesDetail,props:true},
     {path:'/messageboard',component:MessageBoard}
   ]
 // 解决导航栏中的vue-router在3.0版本以上重复点菜单报错问题

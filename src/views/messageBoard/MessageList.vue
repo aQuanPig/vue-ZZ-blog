@@ -1,18 +1,16 @@
 <template>
     <div class="mt-6 comment-list">
-      <p class="allcomment mb-3">全部留言</p>
-      <div v-for="(item,index) in messages" :key="item._id">
-        <div class="display-flex">
-          <img :src="item.avatar" class="avatar" alt="">
-          <div class="flex pl-2">
-            <p class="nickname">{{item.nickname}}</p>
-            <span class="date">{{index+1}}楼</span>
-            <span class="date pl-3">{{item.date | formatDateAll}}</span>
-            <div class="content font-m">
-              <span>{{item.content}}</span>
-              <div class="display-flex mt-2">
-                <p class="iconfont icon-dianzan another">赞</p>
-                <p class="iconfont icon-huifu pl-3 another">回复</p>
+      <p class="allcomment mb-3 pt-3">全部留言</p>
+      <div>
+        <div v-for="(item,index) in messages" :key="item._id">
+          <div class="display-flex">
+            <img :src="item.avatar" class="avatar" alt="">
+            <div class="flex pl-2">
+              <p class="nickname">{{item.nickname}}</p>
+              <span class="date">{{index+1}}楼</span>
+              <span class="date pl-3">{{item.date | formatDateAll}}</span>
+              <div class="content font-m">
+                <span>{{item.content}}</span>
               </div>
             </div>
           </div>
@@ -38,6 +36,7 @@
 
 <style lang="scss" scoped>
 .comment-list{
+  background-color: #fff;
    .allcomment{
      font-size:20px;
      &:before {

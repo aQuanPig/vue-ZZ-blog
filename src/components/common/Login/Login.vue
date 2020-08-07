@@ -57,7 +57,7 @@
         sessionStorage.setItem('userinfo',JSON.stringify(obj))
         //将用户名存入vuex中
         this.$store.commit(GET_USERINFO,obj)
-        this.$router.push('/articles')
+        this.$router.push('/')
       },
       changeClick(){
         this.$store.commit(SHOW_REGISTER)

@@ -4,7 +4,7 @@
     <back-ground/>
     <loading v-show="$store.state.isLoading"/>
     <keep-alive>
-     <router-view/>
+     <router-view :key="$route.path"/>
     </keep-alive>
   </div>
 </template>
@@ -14,18 +14,10 @@
   import NavBar from "components/common/NavBar";
   export default {
     name: "App",
-    data(){
-      return{
-
-      }
-    },
     components:{
       NavBar,
       Loading,
       BackGround,
-    },
-    mounted() {
-
     }
   }
 </script>
