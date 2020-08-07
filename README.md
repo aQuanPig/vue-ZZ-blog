@@ -30,23 +30,22 @@ npm run serve
 部分截图：
 
 **首页**：
-
-![image-20200806213327114](C:\Users\565\AppData\Roaming\Typora\typora-user-images\image-20200806213327114.png)
+![](https://img-blog.csdnimg.cn/20200806212657909.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzk1MDY0Mw==,size_16,color_FFFFFF,t_70)
 
 **文章列表**：
 
-![image-20200806213402673](C:\Users\565\AppData\Roaming\Typora\typora-user-images\image-20200806213402673.png)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20200806221114720.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzk1MDY0Mw==,size_16,color_FFFFFF,t_70)
 
 **文章分类：**
 
-![image-20200806213419358](C:\Users\565\AppData\Roaming\Typora\typora-user-images\image-20200806213419358.png)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20200806221209862.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzk1MDY0Mw==,size_16,color_FFFFFF,t_70)
 
 **登录：**
 
-![image-20200806213459450](C:\Users\565\AppData\Roaming\Typora\typora-user-images\image-20200806213459450.png)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20200806221257925.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzk1MDY0Mw==,size_16,color_FFFFFF,t_70)
 
 **注册：**
 
-![image-20200806213506167](C:\Users\565\AppData\Roaming\Typora\typora-user-images\image-20200806213506167.png)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20200806221314113.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzk1MDY0Mw==,size_16,color_FFFFFF,t_70)
 
 其他界面正在完善.......
